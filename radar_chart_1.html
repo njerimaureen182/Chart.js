@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+  <head>
+
+    <title>Radar Chart</title>
+  </head>
+  <body>
+    <canvas id="chart_radar"></canvas>
+
+    <script src="assets/js/chart.bundle.js"></script>
+
+    <script>
+    var ctx = document.getElementById('chart_radar').getContext('2d');
+    var chart_radar = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'radar',
+
+        // The data for our dataset
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+                label: "My First dataset",
+                backgroundColor: 'rgb(0, 200, 132)',
+                borderColor: 'rgb(0, 200, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45],
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radar Chart</title>
+</head>
+<body>
+	<canvas id="chart_radar"></canvas>
+	<script src="assets/js/chart.bundle.js"></script>
+	<script>
+		var ctx=document.getElementById('chart_radar').getContext('2d');
+		var chart_radar=new Chart(ctx,{
+
+			type:'radar',
+
+			data:{
+				labels:['January','February','March','April','May','June'],
+				datasets:[{
+					label:"# of days in a month",
+					data:[31,28,31,30,31],
+					backgroundColor:'rgba(132,76,150,0.3)',
+					borderColor:'rgba(176,182,19,1)',
+					borderWidth:1
+				}]
+
+			},
+
+			options:{}
+			
+			
+		});
+	
+	</script>
+
+</body>
+</html>

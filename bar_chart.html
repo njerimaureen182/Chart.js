@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar Chart</title>
+	
+</head>
+<body>
+	<canvas id="myChart_Bar"></canvas>
+
+	<script src="assets/js/chart.bundle.js"></script>
+	<script>
+
+
+		var ctx=document.getElementById('myChart_Bar').getContext('2d');
+		var myChart_Bar=new Chart(ctx,{
+			
+				// The type of chart we are creating:
+			type:'bar',
+
+
+				// The data for our dataset:
+			data:{
+
+					//Here, we come up with our labels(decided to use Monday-Friday in this case):
+				labels:["Monday","Tuesday","Wednesday","Thursday","Friday"],
+
+					// My label represents the number of students present for the days Monday-Friday:
+				datasets:[{
+					label:"# of students present",
+
+						// Here, the data should coincide with the number of labels in your set:
+					data:[22,16,31,5,19],
+
+						// Set the background color for how  you'd like the chart to look like:
+					backgroundColor:['#714B4B','#57831E','#191E49','#6B6524','#95463E'],						
+					borderColor:[
+					'rgba(255,99,132,1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(255, 159, 64, 1)'
+
+				],
+					borderWidth:1
+				}]
+			},
+			options:{
+				scales:{
+					yAxes:[{
+						ticks:{
+								// Here, my y-axis starts from zero:
+							beginAtZero:true
+						}
+					}]
+
+				}
+			} 
+		});
+	</script>
+
+</body>
+</html>
