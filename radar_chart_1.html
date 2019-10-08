@@ -1,35 +1,48 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
+<title>Radar Chart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
 
-    <title>Radar Chart</title>
-  </head>
-  <body>
-    <canvas id="chart_radar"></canvas>
+<br><br> 
 
-    <script src="assets/js/chart.bundle.js"></script>
+<canvas id="chart_radar"></canvas>
 
-    <script>
-    var ctx = document.getElementById('chart_radar').getContext('2d');
-    var chart_radar = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'radar',
+<script src="assets/js/chart.bundle.js"></script>
 
-        // The data for our dataset
-        data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [{
-                label: "My First dataset",
-                backgroundColor: 'rgb(0, 200, 132)',
-                borderColor: 'rgb(0, 200, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45],
-            }]
-        },
+<script>
 
-        // Configuration options go here
-        options: {}
-    });
-    </script>
+var ctx = document.getElementById('chart_radar').getContext('2d');
 
-  </body>
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'radar',
+
+    // The data for our dataset
+    data: {
+
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+
+        datasets: [{
+
+            label: "My First dataset",
+
+            backgroundColor: 'rgba(16, 44, 29, .8)',
+
+            borderColor: 'rgb(255, 245, 103, .8)',
+
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+</script>
+
+</body>
 </html>

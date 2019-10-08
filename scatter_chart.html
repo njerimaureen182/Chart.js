@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Scatter Chart</title>
+<title>Scatter Chart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-	 <canvas id="chart_scatter"></canvas>
-	 <script src="assets/js/chart.bundle.js"></script>
-	 <script>
-	 	var ctx=document.getElementById('chart_scatter').getContext('2d');
-	 	var chart=new Chart(ctx,{
 
-	 		type: 'scatter',
+<br><br>
 
-	 		data: {
+<canvas id="chart_scatter"></canvas>
 
-	 			dataset:[{
-	 				label:'Scatter Dataset',
-	 				pointBackgroundColor:['green','blue','grey','orange','purple'],
-	 				data:[
-	 					{x:0, y:10},
-	 					{x:2, y:8},
-	 					{x:4, y:10},
-	 					{x:7, y:5},
-	 					{x:-2, y:0}
+<script src="assets/js/chart.bundle.js"></script>
 
-	 				],
-	 			}]
+<script>
 
-			},
+	var ctx = document.getElementById('chart_scatter').getContext('2d');
 
+	var chart = new Chart(ctx,{
 
-		   	options:{
-				legend:{
-					display: false
-				},
-				scales:{
-					xAxes:[{
-						type:'linear',
-						position:'bottom'
+		type: 'scatter',
 
-					}]
-   
-					}
-				} 
-			
-			});
+		data: {
 
-	 </script>
+			datasets:[{
+
+				label:'Scatter Dataset',
+
+				pointBackgroundColor:['green','blue','grey','orange','purple'],
+
+				data:[
+					{x:0, y:10},
+					{x:2, y:8},
+					{x:4, y:10},
+					{x:7, y:5},
+					{x:-2, y:0}
+
+				],
+			}]
+
+	},
+
+   	options:{
+		legend:{
+			display: false
+		},
+
+		scales:{
+
+			xAxes:[{
+
+				type:'linear',
+				
+				position:'bottom'
+
+			}]
+
+			}
+		} 
+	
+	});
+
+</script>
 
 </body>
 </html>

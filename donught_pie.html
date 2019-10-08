@@ -1,31 +1,44 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Doughnut and Pie</title>
+<title>Doughnut and Pie</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-	<canvas id="chart_doughnut"></canvas>
-	<script src="assets/js/chart.bundle.js"></script>
-	<script>
-		var ctx=document.getElementById('chart_doughnut').getContext('2d');
-		var chart=new Chart(ctx,{
-			
-			type:"doughnut",
-			
-			data:{
-				 
-				labels:["July","August","September","October","November","December"],
-				dataset:[{
-					label:"Percentage Economic Growth for the Second Half of the Year",
-					data:[1.5,2,3.4,4.2,5.3,6.1],
-	                borderColor:'rgba(87,99,132,0.4)',
-	               	backgroundColor:["green","blue","orange","purple","yellow","red"],
 
-				}]
-			}
-			
-		});
-	</script>
+<br><br>
+
+<canvas id="chart_doughnut"></canvas>
+
+<script src="assets/js/chart.bundle.js"></script>
+
+<script>
+	var ctx=document.getElementById('chart_doughnut').getContext('2d');
+
+	var chart = new Chart(ctx,{
+		
+		type:"doughnut",
+		
+		data:{
+			 
+			labels:["July","August","September","October","November","December"],
+
+			datasets:[{
+
+				label:"Percentage Economic Growth for the Second Half of the Year",
+
+				data:[1.5,2,3.4,4.2,5.3,6.1],
+
+                borderColor:'rgba(87,99,132,0.4)',
+
+               	backgroundColor:["green","blue","orange","purple","yellow","red"],
+
+			}]
+		},
+		
+	});
+</script>
 
 </body>
 </html>

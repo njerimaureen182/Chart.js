@@ -1,41 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bubble Chart</title>
+</head>
 
-    <title>Getting Started with Chart JS</title>
-  </head>
-  <body>
-    <canvas id="myChart"></canvas>
+<body>
 
-    <script src="assets/js/chart.bundle.js"></script>
+<br><br>
 
-    <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bubble',
+<canvas id="myChart_bubble"></canvas>
 
-        // The data for our dataset
-        data: {
-            //labels: ["Company 1", "Company 2", "Company 3", "Company 4"],
-            datasets: [{
-                //label: ["Company 1", "Company 2", "Company 3", "Company 4"],
-                backgroundColor: ['yellow', 'blue', 'red', 'green'],
-                borderColor: '#fff',
-                data: [{x: 5, y: 10, r: 10}, {x: 15, y: 3, r: 15}, {x: 7, y: 15, r: 30}, {x: 25, y: 5, r: 10}],
-            }]
-        },
+<script src="assets/js/chart.bundle.js"></script>
 
-        // Configuration options go here
-        options: {
-          legend: {
-            display: false,
-          }
-        }
-    });
-    </script>
+<script>
+
+var ctx = document.getElementById('myChart_bubble').getContext('2d');
+
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bubble',
+
+    // The data for our dataset
+    data: {
+        //labels: ["Company 1", "Company 2", "Company 3", "Company 4"],
+        datasets: [{
+            //label: ["Company 1", "Company 2", "Company 3", "Company 4"],
+            backgroundColor: ['yellow', 'blue', 'red', 'green'],
+
+            borderColor: '#fff',
+
+            data: [{x: 5, y: 10, r: 10}, 
+                {x: 15, y: 3, r: 15}, 
+                {x: 7, y: 15, r: 30}, 
+                {x: 25, y: 5, r: 10}],
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      legend: {
+        display: false,
+      }
+    }
+});
+</script>
 
   </body>
 </html>

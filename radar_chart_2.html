@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Radar Chart</title>
+<title>Radar Chart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-	<canvas id="chart_radar"></canvas>
-	<script src="assets/js/chart.bundle.js"></script>
-	<script>
-		var ctx=document.getElementById('chart_radar').getContext('2d');
-		var chart_radar=new Chart(ctx,{
 
-			type:'radar',
+<br><br>
 
-			data:{
-				labels:['January','February','March','April','May','June'],
-				datasets:[{
-					label:"# of days in a month",
-					data:[31,28,31,30,31],
-					backgroundColor:'rgba(132,76,150,0.3)',
-					borderColor:'rgba(176,182,19,1)',
-					borderWidth:1
-				}]
+<canvas id="chart_radar"></canvas>
 
-			},
+<script src="assets/js/chart.bundle.js"></script>
 
-			options:{}
-			
-			
-		});
-	
-	</script>
+<script>
+
+	var ctx = document.getElementById('chart_radar').getContext('2d');
+
+	var chart = new Chart(ctx,{
+
+		type:'radar',
+
+		data:{
+
+			labels:['January','February','March','April','May','June'],
+
+			datasets:[{
+
+				label:"# of days in a month",
+
+				data:[31,28,31,30,31],
+
+				backgroundColor:'rgba(132,76,150,0.3)',
+
+				borderColor:'rgba(176,182,19,1)',
+				
+				borderWidth:1
+			}]
+
+		},
+
+		// options:{}
+		
+		
+	});
+
+</script>
 
 </body>
 </html>
